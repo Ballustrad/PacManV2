@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
     public GameObject AudioManager;
     [SerializeField] private AudioSource JB_Hard;
     [SerializeField] private AudioSource BGM;
+    [SerializeField] private AudioSource pelletEattt;
+    [SerializeField] private AudioSource powerPellet;
+    [SerializeField] private AudioSource pcDeath;
+    [SerializeField] private AudioSource ghostDeath
+        ;
 
     private void Start()
     {
@@ -107,6 +112,7 @@ public class GameManager : MonoBehaviour
 
     public void PacmanEaten()
     {
+        pcDeath.Play();
         pacman.DeathSequence();
 
         SetLives(lives - 1);
@@ -121,6 +127,7 @@ public class GameManager : MonoBehaviour
 
     public void GhostEaten(Ghost ghost)
     {
+        ghostDeath.Play();
         int points = ghost.points * ghostMultiplier;
         SetScore(score + points);
 
@@ -129,6 +136,7 @@ public class GameManager : MonoBehaviour
 
     public void PelletEaten(Pellet pellet)
     {
+        pelletEattt.Play();
         pellet.gameObject.SetActive(false);
 
         SetScore(score + pellet.points);
@@ -150,6 +158,7 @@ public class GameManager : MonoBehaviour
     }
     public void PowerPelletEaten(PowerPellet pellet)
     {
+        powerPellet.Play();
         StartCoroutine(cameraShake.Shake(8f, .040f));
         StartCoroutine(PowerMusic());
         for (int i = 0; i < ghosts.Length; i++) {
