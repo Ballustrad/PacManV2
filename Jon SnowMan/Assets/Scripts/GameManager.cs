@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource pcDeath;
     [SerializeField] private AudioSource ghostDeath
         ;
+    internal static object instance;
 
     private void Start()
     {
@@ -104,7 +105,7 @@ public class GameManager : MonoBehaviour
         livesText.text = "x" + lives.ToString();
     }
 
-    private void SetScore(int score)
+    public void SetScore(int score)
     {
         this.score = score;
         scoreText.text = score.ToString().PadLeft(2, '0');
