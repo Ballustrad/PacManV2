@@ -1126,7 +1126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0cca3ec6dad0b44887d78e9c92a3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruits: {fileID: 5918927739601919750, guid: 16d7ac109db2c22418c07adf01ca368d, type: 3}
+  fruits: {fileID: 947868984}
   spawnInterval: 10
 --- !u!1 &492206897
 GameObject:
@@ -2480,6 +2480,11 @@ Transform:
   m_Father: {fileID: 799682403}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &947868984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5918927739601919750, guid: 16d7ac109db2c22418c07adf01ca368d, type: 3}
+  m_PrefabInstance: {fileID: 241873333}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &994717976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6038318316045854524, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}

@@ -18,7 +18,7 @@ public class Node : MonoBehaviour
         CheckAvailableDirection(Vector2.right);
     }
 
-    private void CheckAvailableDirection(Vector2 direction)
+    public void CheckAvailableDirection(Vector2 direction)
     {
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.5f, 0f, direction, 1f, obstacleLayer);
 
